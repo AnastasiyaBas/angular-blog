@@ -14,4 +14,8 @@ export class HttpService{
         return this.http.get<any>('https://jsonplaceholder.typicode.com/users?_limit=3', {})
         
     }
+    getCommentsList(){
+        return this.http.get<any>('https://jsonplaceholder.typicode.com/comments?_limit=10', {})
+        
+    }
 }

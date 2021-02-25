@@ -8,6 +8,15 @@ export interface Posts {
     id?: number
     userId: number
 }
+export interface Users {
+    id?: number
+    name: string
+    userId: number
+}
+export interface Comments {
+    id?: number
+    body: string
+}
 
 @Component({
     selector: 'app-post',
@@ -17,6 +26,9 @@ export interface Posts {
 })
 export class PostComponent implements OnInit {
     postList: Posts[] = [];
+    userList: Users[] = [];
+    commentList: Comments[] = [];
+
     modalRef: MDBModalRef;
     constructor(private httpService: HttpService,
                 private modalService: MDBModalService) { }
@@ -38,6 +50,15 @@ export class PostComponent implements OnInit {
         this.httpService.getPostList().subscribe((response) => {
             this.postList = response
         });
+        this.httpService.getUsersList().subscribe((response) => {
+            this.userList = response
+        });
+        this.httpService.getCommentsList().subscribe((response) => {
+            this.commentList = response
+        });
+    }
+    checkId() {
+        
     }
 
 }

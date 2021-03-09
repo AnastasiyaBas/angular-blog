@@ -1,0 +1,7 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="card col-md-3" *ngFor="let post of postList">
+            <p (click)="openPostModal(post)" class="card-title">{{post?.title}}</p>
+        </div>
+    </div>
+</div>

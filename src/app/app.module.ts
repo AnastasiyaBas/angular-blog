@@ -1,15 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
-import { PostModalComponent } from './post-modal/post-modal.component';
+import { PostModalComponent } from './shared/dialog/post-modal/post-modal.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainLayoutComponent } from './shared/components/main-layout/main-layout.component';
-import { HomePageComponent } from './home-page/home-page.component';
-import { PostComponent } from './shared/components/post/post.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
+import { PostPageComponent } from './pages/post-page/post-page.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { ProfileComponent } from './profile/profile.component';
+import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 
 
 @NgModule({
@@ -18,8 +18,8 @@ import { ProfileComponent } from './profile/profile.component';
     MainLayoutComponent,
     HomePageComponent,
     PostModalComponent,
-    PostComponent,
-    ProfileComponent,
+    PostPageComponent,
+    ProfilePageComponent,
   ],
   imports: [
     BrowserModule,

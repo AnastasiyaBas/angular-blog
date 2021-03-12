@@ -1,3 +1,6 @@
 export const enum ApiUrl {
-USER = "/users"
+    BASE = 'https://jsonplaceholder.typicode.com',
+    POST = '/posts',
+    USER = '/users',
+    COMMENT = '/comments'
 }

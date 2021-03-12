@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MDBModalRef } from 'angular-bootstrap-md';
-import { Comments } from '../services/comments.service';
-import { Posts } from '../services/posts.service';
-import { Users } from '../services/users.service';
+import { Comments, Posts, Users } from 'src/app/modules/interface';
 
 
 @Component({

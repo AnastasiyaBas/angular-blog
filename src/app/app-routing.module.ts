@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomePageComponent } from './home-page/home-page.component';
-import { ProfileComponent } from './profile/profile.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
+import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 import { MainLayoutComponent } from './shared/components/main-layout/main-layout.component';
 
 const routes: Routes = [
@@ -10,7 +10,7 @@ const routes: Routes = [
             {path: '', component: HomePageComponent}
         ]
     },
-    {path: 'profile/:id', component: ProfileComponent}
+    {path: 'profile/:id', component: ProfilePageComponent}
 ];
 
 @NgModule({

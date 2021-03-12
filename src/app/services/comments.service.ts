@@ -1,13 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject} from 'rxjs';
-
-export interface Comments {
-    id: number;
-    postId: number;
-    name: string;
-    body: string;
-}
+import { Comments } from '../modules/interface';
+import { ApiUrl } from '../modules/enum';
 
 @Injectable({
     providedIn: 'root'
@@ -21,7 +16,7 @@ export class CommentsService{
     }
 
     getCommentList(): void {
-        this.http.get<Comments[]>('https://jsonplaceholder.typicode.com/comments?_limit=10', {})
+        this.http.get<Comments[]>(`${ApiUrl.BASE}${ApiUrl.COMMENT}?_limit=10`, {})
         .subscribe(resolve => this.commentList.next(resolve));
 
     }

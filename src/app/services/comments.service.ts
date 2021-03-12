@@ -14,7 +14,7 @@ export interface Comments {
 })
 
 export class CommentsService{
-    comment: any;
+    comment: Comments;
     commentList: BehaviorSubject<Comments[]> = new BehaviorSubject<Comments[]>([]);
     constructor(private http: HttpClient){
         this.getCommentList();

@@ -9,6 +9,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { PostComponent } from './shared/components/post/post.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ProfileComponent } from './profile/profile.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
     HomePageComponent,
     PostModalComponent,
     PostComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,

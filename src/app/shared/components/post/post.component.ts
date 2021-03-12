@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UsersService } from '../../../services/users.service.ts';
+import { UsersService, Users } from '../../../services/users.service';
 import { PostsService, Posts} from '../../../services/posts.service';
 import { PostModalComponent } from '../../../post-modal/post-modal.component';
 import { MDBModalRef, MDBModalService } from 'angular-bootstrap-md';
@@ -11,6 +11,7 @@ import { Comments, CommentsService } from 'src/app/services/comments.service';
     providers: [PostsService]
 })
 export class PostComponent implements OnInit {
+    user: Users;
     postList: Posts[] = [];
     commentList: Comments[] = [];
     modalRef: MDBModalRef;
@@ -20,7 +21,8 @@ export class PostComponent implements OnInit {
                 private modalService: MDBModalService) { }
 
     openPostModal(post: Posts): void {
-        const user = this.usersService.getUser(post.userId);
+        this.user = this.usersService.getUser(post.userId);
+        console.log(this.user);
         this.commentList = this.commentsService.getComments(post.userId);
         this.modalRef = this.modalService.show(PostModalComponent, {
             backdrop: true,
@@ -31,7 +33,7 @@ export class PostComponent implements OnInit {
             class: 'modal-dialog modal-dialog-centered',
             containerClass: 'top',
             animated: true,
-            data: {content: post, user, commentList: this.commentList}
+            data: {content: post, user: this.user, commentList: this.commentList}
         });
 
     }

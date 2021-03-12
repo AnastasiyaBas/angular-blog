@@ -14,7 +14,17 @@ p {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    &_content {
+}
+.modal-post {
+    margin-left: 1rem;
+}
+.modal-comment {
+    padding: 1rem;
+    &_header {
+        font-size: 18px;
+        text-align: center;
+    }
+    &_title {
         margin-left: 1rem;
     }
 }

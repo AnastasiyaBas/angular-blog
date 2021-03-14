@@ -6,13 +6,22 @@
         <div>loading...</div>
     </ng-container>
     <ng-template #userLoading>
-        <div class="modal-post">
-            <h3>{{user.name}}</h3>
-            <h5>{{user.email}}</h5>
-            <p>{{user.website}}</p>
-            <p>{{user.city}}</p>
+        <div class="profile-info">
+            <div class="profile-info_name">{{user.name}}</div>
+            <div class="profile-info_more">Email: {{user.email}}</div>
+            <div class="profile-info_more">Website: {{user.website}}</div>
+            <div class="profile-info_more">City: {{user.address.city}}</div>
         </div>
     </ng-template>
-    
-    
+</div>
+<div class="profile-content">
+    <div class="profile-tabs">
+        <div class="profile-tabs_tab"><a routerLink="my-albums">My albums</a></div>
+        <div class="profile-tabs_tab"><a routerLink="todo-list">To do list</a></div>
+        <div class="profile-tabs_tab"><a routerLink="my-posts">My posts</a></div>
+    </div>
+    <div class="profile-tabs_hr"></div>
+    <div class="profile-tabs">
+        <router-outlet></router-outlet>
+    </div>
 </div>

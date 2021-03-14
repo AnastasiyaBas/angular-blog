@@ -10,6 +10,9 @@ import { PostPageComponent } from './pages/post-page/post-page.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
+import { MyAlbumsComponent } from './pages/profile-page/my-albums/my-albums.component';
+import { ToDoListComponent } from './pages/profile-page/to-do-list/to-do-list.component';
+import { MyPostsComponent } from './pages/profile-page/my-posts/my-posts.component';
 
 
 @NgModule({
@@ -20,6 +23,9 @@ import { ProfilePageComponent } from './pages/profile-page/profile-page.componen
     PostModalComponent,
     PostPageComponent,
     ProfilePageComponent,
+    MyAlbumsComponent,
+    ToDoListComponent,
+    MyPostsComponent,
   ],
   imports: [
     BrowserModule,

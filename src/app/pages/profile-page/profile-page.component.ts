@@ -8,9 +8,10 @@ import { UsersService } from '../../services/users.service';
   styleUrls: ['./profile-page.component.scss']
 })
 export class ProfilePageComponent implements OnInit {
+
     user: any;
     constructor(private usersService: UsersService,
-                private route: ActivatedRoute) { }
+                private route: ActivatedRoute) {}
 
     ngOnInit(): void {
         this.route.params.subscribe(params => {
@@ -22,5 +23,4 @@ export class ProfilePageComponent implements OnInit {
             });
         });
     }
-
 }

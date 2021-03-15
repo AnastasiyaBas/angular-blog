@@ -17,3 +17,10 @@ export interface Users {
     email: string;
     city?: string;
 }
+
+export interface  Albums{
+    userId: number;
+    title: string;
+}
+
+

@@ -35,22 +35,32 @@
         border: solid 1px #96A563;
         border-bottom: none;
         padding: 0.5rem;
-        &:active, &:hover {
+        &:hover {
             background-color: #96A563;
+            a {
+                color: white;
+            }
+        }
+        &:focus {
+            outline: none;
         }
         a {
            color: black; 
-           &:active, &:hover {
-               color: white;
-           }
         }
     }
     &_hr {
         margin: 0 auto;
-        width: 40rem;
+        width: 100%;
         height: 1px;
         background-color: #96A563;
         
+    }
+}
+.active {
+    background-color: #96A563;
+    border: none;
+    a {
+        color: white;
     }
 }
 

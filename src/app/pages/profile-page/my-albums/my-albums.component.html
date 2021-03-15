@@ -1,1 +1,17 @@
-<p>my-albums works!</p>
+<ng-container *ngIf="!albumList; else albumLoading">
+    <div>loading...</div>
+</ng-container>
+<ng-template #albumLoading>
+    <div class="row justify-content-center">
+        <mdb-card
+        style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg')"
+        class="card-image col-md-3" *ngFor="let album of albumList">
+        <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+            <div>
+                <h3 class="card-title pt-2"><strong>{{album.title}}</strong></h3>
+            </div>
+        </div>
+    </mdb-card>
+    </div>
+</ng-template>
+

@@ -14,9 +14,9 @@ const routes: Routes = [
         ]
     },
     {path: 'profile/:id', component: ProfilePageComponent, children: [
-        {path: 'my-albums', component: MyAlbumsComponent},
-        {path: 'todo-list', component: ToDoListComponent},
-        {path: 'my-posts', component: MyPostsComponent},
+        {path: 'my-albums/:id', component: MyAlbumsComponent},
+        {path: 'todo-list/:id', component: ToDoListComponent},
+        {path: 'my-posts/:id', component: MyPostsComponent},
       ]
     }
 ];

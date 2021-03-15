@@ -53,7 +53,7 @@ export class PostPageComponent implements OnInit {
 
         this.router.events.subscribe((event: RouterEvent) => {
             if (ResolveEnd) {
-                console.log(ResolveEnd);
+                // console.log(ResolveEnd);
                 // this.modalService.close();
             }
         });

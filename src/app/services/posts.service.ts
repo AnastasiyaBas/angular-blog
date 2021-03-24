@@ -12,6 +12,5 @@ export class PostsService{
 
     getPostList(): Observable<Posts[]>{
         return this.http.get<Posts[]>(`${ApiUrl.BASE}${ApiUrl.POST}?_limit=18`, {});
-
     }
 }

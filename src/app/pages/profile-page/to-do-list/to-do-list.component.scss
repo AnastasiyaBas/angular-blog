@@ -1,0 +1,34 @@
+.wrap {
+    padding: 2rem;
+    border: 3px solid #96A563;
+}
+.todos {
+    width: 40rem;
+    border: 1px solid black;
+    margin-bottom: 0.5rem;
+    padding: 0.3rem 1rem;
+}
+.todos-more {
+    color: #96A563;
+    text-decoration: underline;
+}
+.checkmark, .trash {
+    padding: 0.2rem;
+    &:hover {
+        background-color: #96A563;
+        border-radius: 50px;
+    }
+}
+.trash {
+    &:hover {
+        background-color: #ff6961;
+    }
+}
+.todos-filter_tab {
+    padding: 0.3rem;
+    text-decoration: underline;
+}
+.comleted {
+    background-color: #96A563;
+    border-radius: 50px;
+}

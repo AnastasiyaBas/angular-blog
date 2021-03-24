@@ -18,9 +18,20 @@ export interface Users {
     city?: string;
 }
 
-export interface  Albums{
+export interface  Albums {
     userId: number;
     title: string;
+}
+
+export interface Todos {
+    userId: number;
+    title: string;
+    completed: boolean;
+    id: number;
+}
+export interface Photos {
+    id: number;
+    url: string;
 }
 
 

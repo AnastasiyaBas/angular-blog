@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { UsersService } from '../../services/users.service';
+import { Users } from '../../modules/interface';
 
 @Component({
   selector: 'app-profile',
@@ -10,6 +11,7 @@ import { UsersService } from '../../services/users.service';
 export class ProfilePageComponent implements OnInit {
 
     user: any;
+
     constructor(private usersService: UsersService,
                 private route: ActivatedRoute) {}
 

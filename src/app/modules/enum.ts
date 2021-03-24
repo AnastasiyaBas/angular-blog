@@ -3,5 +3,7 @@ export const enum ApiUrl {
     POST = '/posts',
     USER = '/users',
     COMMENT = '/comments',
-    ALBUM = '/albums'
+    ALBUM = '/albums',
+    TODOS = '/todos',
+    PHOTO = '/photos'
 }

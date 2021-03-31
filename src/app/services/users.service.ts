@@ -20,7 +20,7 @@ export class UsersService{
         });
     }
 
-    getUser(userId): Users {
+    getUser(userId: number): Users {
         return this.userList.getValue().find(valueUser => valueUser.id === userId);
     }
 }

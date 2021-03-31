@@ -7,6 +7,9 @@
     text-align: center;
     color: white;
     font-style: italic;
+    &:focus {
+        outline: none;
+    }
 }
 .main-login {
     margin-top: 0;

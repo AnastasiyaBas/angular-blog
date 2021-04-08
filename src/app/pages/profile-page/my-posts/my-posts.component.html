@@ -1,1 +1,41 @@
-<p>my-posts works!</p>
+<div class="container">
+    <form [formGroup]="postForm" (ngSubmit)="submit()">
+        <div class="form-row">
+            <div class="col-md-6 offset-md-2">
+                <div class="md-form form-group">
+                    <input id="input_title" formControlName="title" class="form-control" type="text" length="10" mdbCharCounter mdbInput>
+                    <label for="input_title">Title</label>
+                    
+                    <div *ngIf="postForm.get('title').invalid && postForm.get('title').touched">
+                        <mat-error *ngIf="postForm.get('title').errors.required">
+                            Title is <strong>required</strong>
+                        </mat-error>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 offset-md-2 form-wrap">
+                <div class="md-form form-group">
+                    <input id="input_body" formControlName="body" class="form-control" type="text" length="10" mdbCharCounter mdbInput>
+                    <label for="input_body">Body</label>
+                    <div *ngIf="postForm.get('body').invalid && postForm.get('body').touched">
+                        <mat-error *ngIf="postForm.get('body').errors.required">
+                            Body is <strong>required</strong>
+                        </mat-error>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-1 offset-md-1 form-wrap">
+                <button type="submit" mdbBtn class="btn btn-light btn-rounded mt-3" [disabled]="!postForm.valid">Add</button>
+            </div>
+        </div>
+        
+    </form>
+    <div class="row">
+        <div class="card col-md-5" *ngFor="let post of postList">
+            <p class="card-text"><strong>{{post?.title}}</strong></p>
+            <p class="card-text">{{post?.body}}</p>
+        </div>
+    </div>
+</div>

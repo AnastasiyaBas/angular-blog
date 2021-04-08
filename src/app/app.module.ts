@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainLayoutComponent } from './shared/components/main-layout/main-layout.component';
 import { PostPageComponent } from './pages/post-page/post-page.component';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 import { MyAlbumsComponent } from './pages/profile-page/my-albums/my-albums.component';
@@ -25,14 +25,14 @@ import { SliderComponent } from './shared/dialog/slider/slider.component';
     MyAlbumsComponent,
     ToDoListComponent,
     MyPostsComponent,
-    SliderComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,
     MDBBootstrapModule.forRoot(),
     AppRoutingModule,
-    FormsModule,
-    HttpClientModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   entryComponents: [ PostModalComponent ],
   providers: [],

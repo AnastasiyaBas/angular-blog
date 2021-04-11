@@ -17,3 +17,22 @@ export interface Users {
     email: string;
     city?: string;
 }
+
+export interface  Albums {
+    userId: number;
+    id: number;
+    title: string;
+}
+
+export interface Todos {
+    userId: number;
+    title: string;
+    completed: boolean;
+    id: number;
+}
+export interface Photos {
+    id: number;
+    url: string;
+}
+
+

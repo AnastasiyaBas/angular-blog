@@ -20,7 +20,7 @@ export class CommentsService{
         .subscribe(resolve => this.commentList.next(resolve));
 
     }
-    getComments(postId): Comments[] {
+    getComments(postId: number): Comments[] {
         return this.commentList.getValue().filter(valueComment => valueComment.postId === postId);
     }
 

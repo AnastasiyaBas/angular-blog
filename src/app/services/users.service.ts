@@ -16,12 +16,11 @@ export class UsersService{
     getUsersList(): void {
         this.http.get<Users[]>(`${ApiUrl.BASE}${ApiUrl.USER}?_limit=3`, {})
         .subscribe(resolve => {
-            console.log('object');
             this.userList.next(resolve);
         });
     }
 
-    getUser(userId): Users {
+    getUser(userId: number): Users {
         return this.userList.getValue().find(valueUser => valueUser.id === userId);
     }
 }

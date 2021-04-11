@@ -5,28 +5,34 @@ import { PostModalComponent } from './shared/dialog/post-modal/post-modal.compon
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainLayoutComponent } from './shared/components/main-layout/main-layout.component';
-import { HomePageComponent } from './pages/home-page/home-page.component';
 import { PostPageComponent } from './pages/post-page/post-page.component';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
+import { MyAlbumsComponent } from './pages/profile-page/my-albums/my-albums.component';
+import { ToDoListComponent } from './pages/profile-page/to-do-list/to-do-list.component';
+import { MyPostsComponent } from './pages/profile-page/my-posts/my-posts.component';
+import { SliderComponent } from './shared/dialog/slider/slider.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     MainLayoutComponent,
-    HomePageComponent,
     PostModalComponent,
     PostPageComponent,
     ProfilePageComponent,
+    MyAlbumsComponent,
+    ToDoListComponent,
+    MyPostsComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,
     MDBBootstrapModule.forRoot(),
     AppRoutingModule,
-    FormsModule,
-    HttpClientModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   entryComponents: [ PostModalComponent ],
   providers: [],

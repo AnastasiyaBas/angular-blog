@@ -14,7 +14,7 @@ import { ActivatedRoute, NavigationEnd, ResolveEnd, Router, RouterEvent } from '
 })
 export class PostPageComponent implements OnInit {
     user: Users;
-    postList: Posts[] = [];
+    postList: any;
     commentList: Comments[] = [];
     modalRef: MDBModalRef;
     constructor(private postsService: PostsService,
@@ -53,14 +53,17 @@ export class PostPageComponent implements OnInit {
 
         this.router.events.subscribe((event: RouterEvent) => {
             if (ResolveEnd) {
-                console.log(ResolveEnd);
+                // console.log(ResolveEnd);
                 // this.modalService.close();
             }
         });
     }
     ngOnInit(): void{
-        this.postsService.getPostList().subscribe((responce) => {
-            this.postList = responce;
+        this.postsService.postList.subscribe(posts => {
+            if (!posts) {
+                return;
+            }
+            this.postList = posts;
         });
     }
 }

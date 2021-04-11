@@ -1,0 +1,25 @@
+<ng-container *ngIf="!todoList; else todosLoading">
+    <div>loading...</div>
+</ng-container>
+<ng-template #todosLoading>
+    <div class="wrap d-flex flex-column mb-3" (click)="showMore = true">
+        <div class="todos-filter d-flex flex-row justify-content-end mb-3">
+            <a class="todos-filter_tab" (click)="viewAll()">All</a>
+            <a class="todos-filter_tab ml-3" (click)="viewCompleted()">Completed</a>
+        </div>
+        <div class="todos d-flex flex-row justify-content-between" *ngFor="let  todos of todos | slice:0:5">
+            <div class="icon mr-2" (click)="changeProperty(todos.id)"><img src="../../../../assets/icons8-checkmark.svg" alt="checkmark" class="checkmark" [class.comleted]="todos.completed === true"></div>
+            <div class="todos_text">{{todos.title}}</div>
+            <div class="icon ml-2" (click)="delateTodo(todos.id)"><img src="../../../../assets/icons8-trash.svg" alt="trash" class="trash"></div>
+        </div>
+        <ng-container *ngIf="showMore">
+            <div *ngFor="let  todos of todos; let ndx = index">
+                <div class="todos d-flex flex-row justify-content-between" *ngIf="ndx >= 5">
+                    <div class="icon mr-2" (click)="changeProperty(todos.id)"><img src="../../../../assets/icons8-checkmark.svg" alt="checkmark" class="checkmark" [class.comleted]="todos.completed === true"></div>
+                    <div class="todos_text">{{todos.title}}</div>
+                    <div class="icon ml-2" (click)="delateTodo(todos.id)"><img src="../../../../assets/icons8-trash.svg" alt="trash" class="trash"></div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</ng-template>

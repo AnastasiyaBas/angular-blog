@@ -4,7 +4,7 @@
             <h1 class="main-header col-md-2" [routerLink]="['/']">Posts</h1>
             <p class="main-login col-md-2 offset-md-6">Log in</p>
             <div class="main-toggle custom-control custom-switch col-md-2">
-                <input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
+                <input type="checkbox" [ngClass]="{ovalSelected: themes === 'light-theme'}" (click)="toggleTheme()"class="custom-control-input" id="customSwitch1">
                 <label class="custom-control-label" for="customSwitch1">Dark mode</label>
             </div>
         </div>

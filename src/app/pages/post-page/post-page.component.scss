@@ -1,6 +1,11 @@
+@import "post-page.component.light-theme.scss";
+@import "post-page.component.dark-theme.scss";
+
+.cards{
+    margin-top: 1.5rem;
+}
 .card {
     flex-direction: row;
-    background-color: rgba(35, 77, 32, 0.74);
     padding: 1rem;
     margin: 0.5rem;
     justify-content: center;
@@ -9,3 +14,5 @@
     margin: 0;
     color: white;
 }
+
+

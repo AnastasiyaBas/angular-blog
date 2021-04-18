@@ -1,4 +1,11 @@
+@import './assets/style/them.scss';
 /* You can add global styles to this file, and also import other style files */
 body.modal-open {
     overflow: hidden !important;
+}
+body.light-theme {
+    background: white;
+}
+body.dark-theme {
+    background-color: rgba(36, 43, 36, 2);
 }

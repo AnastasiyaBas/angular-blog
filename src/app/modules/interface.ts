@@ -35,4 +35,9 @@ export interface Photos {
     url: string;
 }
 
+export interface ThemeObject {
+    oldValue: string;
+    newValue: string;
+}
+
 

@@ -1,0 +1,9 @@
+@import './../../../../assets/style/variables.scss';
+:host-context(.light-theme) {
+    .modal_text {
+        color: black;
+    }
+    .icon{
+        fill: $modal-color;
+    }
+}

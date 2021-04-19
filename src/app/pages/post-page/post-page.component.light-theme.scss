@@ -1,4 +1,4 @@
-@import './../../../assets/style/them.scss';
+@import './../../../assets/style/variables.scss';
 :host-context(.light-theme) {
     .card {
         background-color: $light-color;

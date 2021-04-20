@@ -1,0 +1,6 @@
+@import "./../../../../assets/style/variables.scss";
+:host-context(.light-theme) {
+    .wrap {
+        border:  #96A563;
+    }
+}

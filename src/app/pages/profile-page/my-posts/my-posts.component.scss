@@ -1,5 +1,7 @@
+@import "./my-posts.component.light-theme.scss";
+@import "./my-posts.component.dark-theme.scss";
+
 .card {
-    background-color: rgba(35, 77, 32, 0.74);
     padding: 1rem;
     margin: 0.5rem auto;
     justify-content: center;
@@ -9,22 +11,6 @@
     color: white;
     text-align: center;
 }
-
 .form-wrap {
     margin-top: -1.5rem;
-}
-input[type=text]:focus:not([readonly]) + label {
-    color: rgba(35, 77, 32, 0.74); 
-}
-
-input[type=text]:focus:not([readonly]) {
-    border-bottom: 1px solid rgba(35, 77, 32, 0.74);
-    box-shadow: 0 1px 0 0 rgba(35, 77, 32, 0.74); 
-}
-.btn-light {
-    background: rgba(35, 77, 32, 0.74) !important;
-    color: white !important;
-}
-mat-error {
-    color: red;
 }

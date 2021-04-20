@@ -1,0 +1,35 @@
+@import './../../../assets/style/variables.scss';
+:host-context(.light-theme) {
+    .icon{
+        fill: $color1;
+    }
+    .profile-info-name {
+        color: $color1;
+    }
+    .profile-tabs {
+        &-tab {
+            border: solid 1px $color1;
+            border-bottom: none;
+            &:hover {
+                background-color: $color1;
+                a {
+                    color: white;
+                }
+            }
+            a {
+                color: black; 
+            }
+        }
+
+        &-hr {
+            background-color: $color1;
+        }
+    }
+    .active {
+        background-color: $color1;
+        border: none;
+        a {
+            color: white;
+        }
+    }
+}

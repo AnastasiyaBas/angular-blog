@@ -1,6 +1,9 @@
+
+@import "./to-do-list.component.dark-theme.scss";
+@import "./../../../../assets/style/variables.scss";
 .wrap {
     padding: 2rem;
-    border: 3px solid #96A563;
+    border: 3px solid $color1;
 }
 .todos {
     width: 40rem;
@@ -9,13 +12,13 @@
     padding: 0.3rem 1rem;
 }
 .todos-more {
-    color: #96A563;
+    color: $color1;
     text-decoration: underline;
 }
 .checkmark, .trash {
     padding: 0.2rem;
     &:hover {
-        background-color: #96A563;
+        background-color: rgb(74, 116, 71);
         border-radius: 50px;
     }
 }
@@ -29,6 +32,6 @@
     text-decoration: underline;
 }
 .comleted {
-    background-color: #96A563;
+    background-color: rgb(74, 116, 71);
     border-radius: 50px;
 }

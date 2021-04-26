@@ -1,0 +1,32 @@
+@import "./../../../../assets/style/variables.scss";
+:host-context(.dark-theme) {
+    .wrap {
+        border: 3px solid $color2;
+    }
+    .todos {
+        border: 1px solid $color2;
+    }
+    .todos_text {
+        color: white;
+    }
+    .todos-filter_tab {
+        color: white;
+    }
+    .todos-more {
+        color: $color2;
+    }
+    .checkmark, .trash {
+        fill: white;
+        &:hover {
+            background-color: $color2;
+        }
+    }
+    .trash {
+        &:hover {
+            background-color: #ff6961;
+        }
+    }
+    .comleted {
+        background-color: $color2;
+    }
+}

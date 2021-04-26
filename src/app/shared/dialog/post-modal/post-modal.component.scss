@@ -1,30 +1,41 @@
+@import './post-modal.component.light-theme.scss';
+@import './post-modal.component.dark-theme.scss';
 h3 {
     color: rgba(35, 77, 32, 0.74);
 }
-h5 {
-    font-size: 1rem;
-}
 p {
-    font-size: 0.7rem;
+    font-size: 12px;
 }
-.icon{
-    fill: #96A563;
+button:focus{
+    outline: none;
 }
 .modal-wrap {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 0.8rem;
+    &_border {
+        padding: 0.5rem;
+        border: 2px dashed gray;
+        border-radius: 1rem;
+        margin-left: 1rem;
+    }
+    &_userphoto{
+        display: flex;
+        align-items: center;
+    }
 }
 .modal-post {
     margin-left: 1rem;
+    &_header {
+        font-size: 20px;
+        margin-left: 1.5rem;
+    }
 }
 .modal-comment {
     padding: 1rem;
     &_header {
         font-size: 18px;
         text-align: center;
-    }
-    &_title {
-        margin-left: 1rem;
     }
 }

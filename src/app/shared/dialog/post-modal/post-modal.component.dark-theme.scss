@@ -1,0 +1,15 @@
+@import './../../../../assets/style/variables.scss';
+:host-context(.dark-theme) {
+    .modal-content {
+        background-color: black;
+    }
+    .modal_text {
+        color: white;
+    }
+    .icon {
+        fill: $light-color;
+    }
+    .modal-wrap_border {
+        background-color: rgba($color: grey, $alpha: 0.5);
+    }
+}

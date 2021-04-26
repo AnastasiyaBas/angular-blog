@@ -38,10 +38,7 @@ export class MyPostsComponent implements OnInit {
         formData.append('title', this.postForm.get('title').value);
         formData.append('body', this.postForm.get('body').value);
         formData.append('userId', this.userId);
-        this.postsService.addPost(formData).subscribe(
-            (response) => console.log(response),
-            (error) => console.log(error)
-        );
+        this.postsService.addPost(formData);
         this.postForm.reset();
 
         this.postList.push({

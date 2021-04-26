@@ -1,0 +1,30 @@
+@import "./../../../../assets/style/variables.scss";
+:host-context(.dark-theme) {
+    .card {
+        background-color: $color2;
+    }
+    input[type=text]:focus:not([readonly]) + label {
+        color: $color2; 
+    }
+    input[type=text]:focus:not([readonly]) {
+        border-bottom: 1px solid $color2;
+        box-shadow: 0 1px 0 0 $color2; 
+    }
+    .btn-light {
+        background:$color2 !important;
+        color: white !important;
+    }
+    .form-control {
+        color: white;
+    }
+    mat-error {
+        color: red;
+    }
+    input:-webkit-autofill,
+    textarea:-webkit-autofill,
+    select:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 1000px rgba(36, 43, 36, 2) inset !important;
+                box-shadow: 0 0 0 1000px rgba(36, 43, 36, 2) inset !important;
+        -webkit-text-fill-color: white !important;
+    }
+}
